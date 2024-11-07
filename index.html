@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Reserva de Hotel</h1>
+        <p>Preencha todos os campos para garantir sua estadia conosco.</p>
+        
+        <form action="https://www.trivago.com.br" method="get">
+            
+            <!-- Informações Pessoais -->
+            <div class="form-section">
+                <h2>Informações Pessoais</h2>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="name"><i class="fas fa-user"></i> Nome Completo</label>
+                        <input type="text" id="name" name="name" placeholder="Nome completo" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="phone"><i class="fas fa-phone-alt"></i> Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="document"><i class="fas fa-id-card"></i> Documento</label>
+                        <input type="text" id="document" name="document" placeholder="RG ou CPF" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações de Reserva -->
+            <div class="form-section">
+                <h2>Informações de Reserva</h2>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="checkin"><i class="fas fa-calendar-alt"></i> Data de Entrada</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="checkout"><i class="fas fa-calendar-alt"></i> Data de Saída</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="guests"><i class="fas fa-users"></i> Hóspedes</label>
+                        <input type="number" id="guests" name="guests" min="1" placeholder="1" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="children"><i class="fas fa-child"></i> Crianças</label>
+                        <input type="number" id="children" name="children" min="0" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="room"><i class="fas fa-bed"></i> Tipo de Quarto</label>
+                        <select id="room" name="room" required>
+                            <option value="standard">Standard</option>
+                            <option value="deluxe">Deluxe</option>
+                            <option value="suite">Suíte</option>
+                            <option value="family">Família</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="bed"><i class="fas fa-bed"></i> Preferência de Cama</label>
+                        <select id="bed" name="bed" required>
+                            <option value="king">Cama King</option>
+                            <option value="queen">Cama Queen</option>
+                            <option value="twin">Duas Solteiro</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preferências -->
+            <div class="form-section">
+                <h2>Preferências</h2>
+                <div class="input-group full-width">
+                    <label for="requests"><i class="fas fa-comments"></i> Pedidos Especiais</label>
+                    <textarea id="requests" name="requests" placeholder="Escreva suas preferências..." rows="2"></textarea>
+                </div>
+            </div>
+
+            <button type="submit">Confirmar Reserva</button>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
